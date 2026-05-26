@@ -16,9 +16,9 @@ const storeName = "TechMart";
 storeName = "MegaShop";
 console.log(storeName);
 
-// What's wrong ↓
+// What's wrong ↓ typeError: reassigning value to constant variable not allowed
 
-// Your fix ↓
+// Your fix ↓ let storeName , declare as let
 
 
 // ----------------------------------------------------------
@@ -31,9 +31,9 @@ let item2Price = 34.99;
 let orderTotal = item1Price + Item2Price;
 console.log("Total: $" + orderTotal);
 
-// What's wrong ↓
+// What's wrong ↓ typo Item2Price not defined as right variable is item2Price;
 
-// Your fix ↓
+// Your fix ↓ let orderTotal = item1Price + item2Price;
 
 
 // ----------------------------------------------------------
@@ -50,6 +50,11 @@ console.log(productName + " — $" + productPrice);
 // Hint: the code works, but what keyword should you be using instead?
 // Why is the current keyword considered bad practice?
 
-// What's wrong ↓
+// What's wrong ↓ var declaration , as var does not respects block scope
 
 // Your fix ↓
+
+
+const productName = "Headphones";
+const productPrice = 49.99;
+console.log(productName + " — $" + productPrice);

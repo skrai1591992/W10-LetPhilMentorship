@@ -23,6 +23,12 @@
 //
 // Log all four to the console.
 
+    const fullName = "Sammy_Rai";   //Variable value remains constant
+    const age = 33;                 // Value remains constant
+    let city = "Perth";           // Value is changing ahead
+    let isStudent = true;           // Value can change
+
+    console.log(`My fullmane is ${fullName}, age is ${age}, living in ${city} and isStudent is ${isStudent}`); // I learnt this in Level 1 from videos
 // ----------------------------------------------------------
 // TASK 2 — Update what can change
 // ----------------------------------------------------------
@@ -33,15 +39,34 @@
 // Then try to reassign fullName.
 // Read the error, then comment that line out.
 
+    city = "Adelaide"; 
+    isStudent = false;
+    console.log(city, isStudent);
+    //app.js:42 Uncaught TypeError: Assignment to constant variable.
+    //at app.js:42:10
+    //(anonymous)	@	app.js:42
+
+
+    //fullName = "Nanny";
+    //console.log(fullName);
+    //app.js:50 Uncaught TypeError: Assignment to constant variable.
+    //at app.js:50:14
+
+
 // ----------------------------------------------------------
 // TASK 3 — Undefined in the wild
 // ----------------------------------------------------------
 // Declare a let called favoriteMovie — do NOT assign a value.
 // Log it. Write what you see as a comment.
+
+    let favoriteMovie; // undefined as the value has not been assigned
+    console.log(favoriteMovie);
 //
 // Now assign it a movie title.
 // Log it again.
 
+    favoriteMovie ="Batman";
+    console.log(favoriteMovie);
 // ----------------------------------------------------------
 // TASK 4 — Build a product listing
 // ----------------------------------------------------------
@@ -56,16 +81,26 @@
 // Log each variable on its own line.
 // Then log: productName + " by " + productBrand + " — $" + productPrice
 
+const productName = "Apple", productBrand = "Fiji" , productPrice = 12 ;// Decalring and assigning all three variables in a line 
+let inStock = true; 
+    console.log(productName + " by " + productBrand + " — $" + productPrice);
 // ----------------------------------------------------------
 // TASK 5 — Stock status update
 // ----------------------------------------------------------
 // Reassign inStock to false.
 // Log: "In stock: " + inStock
+
+    inStock = false;
+    console.log( "In stock: " + inStock);
 //
 // Try to reassign productName.
 // Read the error and comment the line out.
 // Why did this fail but inStock worked?
 // Write your answer as a comment.
+
+    //productName = "Banana";
+    //console.log(productName); // app.js:101 Uncaught TypeError: Assignment to constant variable. at app.js:101:17
+    // Assigning value to const variable is not allowed as it remains fixed
 
 // ----------------------------------------------------------
 // TASK 6 — Fix the bad names
@@ -78,17 +113,33 @@
 //   X             → rename to something descriptive, then declare it
 //   GaMeLeVeL     → fix the casing
 
+    let secondPlayer = "Abhi";
+    let myScore = 87;
+    let fitnessScore = 39;
+    let gameLevel = 3;
+
+    console.log(secondPlayer,myScore,fitnessScore,gameLevel);
+
 // ----------------------------------------------------------
 // TASK 7 — Two-step declaration
 // ----------------------------------------------------------
 // Declare a let called highScore — do NOT assign a value.
 // Log it.
+
+    let highScore;
+    console.log(highScore);
 //
 // Assign highScore the value 500.
 // Log it.
+
+    highScore = 500;
+    console.log(highScore);
 //
 // Reassign highScore to 750.
 // Log it.
+
+    highScore = 750;
+    console.log(highScore);
 //
 // You should see three console lines: undefined → 500 → 750
 
@@ -99,8 +150,12 @@
 //   appName    → "TaskMaster"
 //   version    → 3
 //   authorName → your name
-//
+// 
+
+    const appName = "TaskMaster", version = 3; authorName = "Sammy_Rai"; // Using Shorthand to declare and assign three variables
 // Log: appName + " v" + version + " — built by " + authorName
+
+    console.log(appName + " v" + version + " — built by " + authorName);
 // Expected format: "TaskMaster v3 — built by [your name]"
 
 // ----------------------------------------------------------
@@ -112,6 +167,14 @@
 //
 // Log: appName + " has been running for " + yearsRunning + " years."
 //
-// Then reassign currentYear... wait, can you? Why not?
+// Then reassign currentYear... wait, can you? Why not? // currentYear.. has the constant decalration value cannot change
 // Write the answer as a comment.
-// What keyword would you need if currentYear could change?
+// What keyword would you need if currentYear could change? // to reassign value declaration should be let
+
+
+const startYear =2020;
+const currentYear = 2025;
+let yearsRunning = currentYear - startYear;
+
+console.log(appName +"has been running for" + " "+ yearsRunning +" " + "years."); 
+

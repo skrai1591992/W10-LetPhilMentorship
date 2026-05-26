@@ -13,12 +13,13 @@
 
 const billAmount = 80;
 const tipPercent = 15;
-const tipAmount  = billAmount % tipPercent;
+const tipAmount  = billAmount % tipPercent;  // 80 % 15 is 5 but 15% of 80 is $12
 console.log("Tip: $" + tipAmount);
 
-// What's wrong ↓
+// What's wrong ↓ // 80 % 15 is 5 but 15% of 80 is $12
 
-// Your fix ↓
+// Your fix ↓ 
+const tipAmount  = billAmount * (tipPercent/100);
 
 
 // ----------------------------------------------------------
@@ -33,9 +34,10 @@ countdown -= 1;
 countdown -= 1;
 console.log("Countdown: " + countdown);
 
-// What's wrong ↓
+// What's wrong ↓ const variable can't be reassigned a value
 
-// Your fix ↓
+// Your fix ↓ 
+let countdown =10;
 
 
 // ----------------------------------------------------------
@@ -50,10 +52,13 @@ var username1 = "gamer99";
 var username2 = "Gamer99";
 console.log("Names match: " + (username1 == username2));
 
-// Logic bug ↓
+// Logic bug ↓  Strict Equality ===;
 
-// Style issue 1 ↓
-
-// Style issue 2 ↓
+// Style issue 1 ↓ var username1 = "gamer99";
+ 
+// Style issue 2 ↓ var username1 = "gamer99";
 
 // Your fix ↓
+const username1 = "gamer99";
+const username2 = "Gamer99";
+console.log("Names match: " + (username1 === username2));
